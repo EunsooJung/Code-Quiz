@@ -1,0 +1,35 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 20px;
+  border: 0.3rem solid rgba(86, 185, 235, 0.25);
+  background-color: seashell;
+  border-radius: 8px;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 208, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: rgb(147, 219, 116);
+  border-radius: 8px;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* selected choices */
+.correct {
+  background-color: yellowgreen;
+}
+.incorrect {
+  background-color: tomato;
+}
