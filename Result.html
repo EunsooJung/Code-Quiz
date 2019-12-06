@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="./assets/css/quiz.css">
+  <link rel="stylesheet" href="./assets/css/util.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="result" class="flex-center flex-column">
+      <h1 id="finalScore">0</h1>
+      <form>
+        <input type="text" name="userInitial" id="userInitial" placeholder="Your initial" />
+        <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+          Save
+        </button>
+      </form>
+      <a class="btn" href="/QuizGame.html">Play Again</a>
+      <a class="btn" href="/">Home</a>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="Result.js"></script>
+</body>
+
+</html>
