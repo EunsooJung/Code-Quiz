@@ -1,5 +1,8 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const progressText = document.getElementById('progressText');
+const scoreEl = document.getElementById('score');
+const progressBarFull = document.getElementById('progressBarFull');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -67,6 +70,12 @@ getNewQuestion = () => {
   }
 
   questionCounter++;
+  // progressText.innerText = questionCounter + '/' + MAX_QUESTIONS;
+  // Apply ES6
+  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+
+  //Update the progress bar
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];
@@ -78,7 +87,6 @@ getNewQuestion = () => {
   });
 
   availableQuesions.splice(questionIndex, 1);
-
   acceptingAnswers = true;
 };
 
@@ -92,6 +100,12 @@ choices.forEach(choice => {
 
     const classToApply =
       selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+    // Bonus Score
+    if (classToApply === 'correct') {
+      incrementScore(CORRECT_BONUS);
+    }
+
     selectedChoice.parentElement.classList.add(classToApply);
 
     setTimeout(() => {
@@ -100,5 +114,11 @@ choices.forEach(choice => {
     }, 1000);
   });
 });
+
+// Increment score for collect answer
+incrementScore = num => {
+  score += num;
+  scoreEl.innerText = score;
+};
 
 startQuizGame();

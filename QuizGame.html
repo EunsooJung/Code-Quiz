@@ -14,8 +14,30 @@
 <body>
   <div class="container">
     <div id="quiz-game" class="justify-center flex-column">
-      <h2 id="question">Question to answer </h2>
 
+      <div id="trace">
+
+        <div id="trace-item">
+          <p class="trace-prefix" id="progressText">
+            Question
+          </p>
+          <div id="progressBar">
+            <div id="progressBarFull"></div>
+          </div>
+        </div>
+
+        <div id="trace-item">
+          <p class="trace-prefix">
+            Score
+          </p>
+          <h1 class="trace-main-text" id="score">
+            0
+          </h1>
+        </div>
+
+      </div>
+
+      <h2 id="question">Question to answer </h2>
       <div class="choice-container">
         <p class="choice-prefix">A</p>
         <p class="choice-text" data-number="1">Choise 1</p>

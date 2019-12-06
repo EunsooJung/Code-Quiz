@@ -33,3 +33,33 @@
 .incorrect {
   background-color: tomato;
 }
+
+/* trace */
+#trace {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+}
+
+.trace-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.trace-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.5rem solid rgb(147, 219, 116);
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background-color: rgb(147, 219, 116);
+  width: 0%;
+}
