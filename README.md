@@ -18,7 +18,14 @@ After downloading, simply edit the HTML, CSS and Javascript files included with 
 
 ### Code Snippet
 
----
+// To get random question (1 to 5)
+`const questionIndex = Math.floor(Math.random() * availableQuesions.length);`
+
+// Apply ES6
+progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+
+// Apply to the progress bar
+progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
 ## Built With
 
