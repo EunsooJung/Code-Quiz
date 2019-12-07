@@ -140,8 +140,4 @@ incrementScore = num => {
   scoreEl.innerText = score;
 };
 
-timerStatus = () => {
-  leftTime.innerText = leftTime;
-};
-
 startQuizGame();

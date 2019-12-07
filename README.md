@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Preview
 
-[![Password Generator Preview](https://github.com/EunsooJung/password-generator/blob/master/result.png)](https://github.com/EunsooJung/password-generator/blob/master/result.png)
+[![Password Generator Preview](https://github.com/EunsooJung/Code-Quiz/blob/master/assets/images/Unit%2004%20Code%20Quiz.gif)](https://github.com/EunsooJung/Code-Quiz/blob/master/assets/images/Unit%2004%20Code%20Quiz.gif)
 
 ## Usage
 
@@ -26,18 +26,11 @@ After downloading, simply edit the HTML, CSS and Javascript files included with 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-- https://startbootstrap.com
-- https://twitter.com/SBootstrap
-
 ## Authors
 
 - **Michael(Eunsoo)Jung**
 
-* [https://eunsoojung.github.io/password-generator/password-generator.html](https://eunsoojung.github.io/password-generator/password-generator.html)
+* [https://eunsoojung.github.io/Code-Quiz/](https://eunsoojung.github.io/Code-Quiz/)
 * [Link to Github](https://github.com/)
 * [Link to LinkedIn](www.linkedin.com/in/eun-soo-jung/) / www.linkedin.com/in/eun-soo-jung/
 
