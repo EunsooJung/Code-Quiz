@@ -58,7 +58,7 @@ let questions = [
 var CORRECT_BONUS = 10;
 var MAX_QUESTIONS = 5;
 var leftTime = 25;
-var timer = 0;
+var timer;
 
 startQuizGame = () => {
   questionCounter = 0;
@@ -80,7 +80,7 @@ startQuizGame = () => {
 
 startTimer = () => {
   timer = setInterval(() => {
-    timerStatus(leftTime);
+    timerEl.innerText = leftTime;
     console.log(leftTime);
     leftTime--;
     if (!leftTime) {
@@ -150,9 +150,8 @@ incrementScore = num => {
   scoreEl.innerText = score;
 };
 
-timerStatus = num => {
-  timer = num;
-  timerEl.innerText = timer;
+timerStatus = () => {
+  leftTime.innerText = leftTime;
 };
 
 startQuizGame();
