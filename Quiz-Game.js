@@ -3,6 +3,7 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreEl = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
+const timerEl = document.getElementById('timer');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -56,18 +57,46 @@ let questions = [
 
 var CORRECT_BONUS = 10;
 var MAX_QUESTIONS = 5;
+var leftTime = 25;
+var timer = 0;
 
 startQuizGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuesions = [...questions];
   getNewQuestion();
+  startTimer();
+};
+
+// startTimer = () => {
+//   timer = setInterval(() => {
+//     console.log(leftTime);
+//     leftTime--;
+//     if (!leftTime) {
+//       endGame();
+//     }
+//   }, 1000);
+// };
+
+startTimer = () => {
+  timer = setInterval(() => {
+    timerStatus(leftTime);
+    console.log(leftTime);
+    leftTime--;
+    if (!leftTime) {
+      endGame();
+    }
+  }, 1000);
+};
+
+endGame = () => {
+  localStorage.setItem('mostRecentScore', score);
+  window.location.href = 'Result.html';
 };
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    localStorage.setItem('mostRecentScore', score);
-    return window.location.assign('/Result.html');
+    endGame();
   }
 
   questionCounter++;
@@ -102,6 +131,9 @@ choices.forEach(choice => {
 
     if (classToApply === 'correct') {
       incrementScore(CORRECT_BONUS);
+      leftTime += 3;
+      clearInterval(timer);
+      startTimer();
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
@@ -116,6 +148,11 @@ choices.forEach(choice => {
 incrementScore = num => {
   score += num;
   scoreEl.innerText = score;
+};
+
+timerStatus = num => {
+  timer = num;
+  timerEl.innerText = timer;
 };
 
 startQuizGame();
