@@ -3,7 +3,7 @@
 Unit 04 Web APIs Homework: Code Quiz
 
 - build a timer-based quiz application that stores high scores client-side.
-  [Applied to My Reponsive Portfolio](https://eunsoojung.github.io/Unit-02-Responsive-Portfolio/)
+  [Applied to My Reponsive Portfolio](https://eunsoojung.github.io/Unit-02-Responsive-Portfolio/portfolio.html)
 
 ## Getting Started
 
