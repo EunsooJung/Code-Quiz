@@ -68,16 +68,6 @@ startQuizGame = () => {
   startTimer();
 };
 
-// startTimer = () => {
-//   timer = setInterval(() => {
-//     console.log(leftTime);
-//     leftTime--;
-//     if (!leftTime) {
-//       endGame();
-//     }
-//   }, 1000);
-// };
-
 startTimer = () => {
   timer = setInterval(() => {
     timerEl.innerText = leftTime;
